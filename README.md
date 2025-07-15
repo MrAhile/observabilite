@@ -44,22 +44,7 @@ Avant de configurer et lancer le projet, assurez-vous d'avoir les éléments sui
 
 Le projet est organisé comme suit :
 
-projet/
-├── config.yaml
-├── manage_k8s_observability.py
-└── kubernetes_manifests/
-....├─ namespace.yaml
-....├── grafana-secrets.yaml
-....├── pgadmin-secrets.yaml
-....├── postgres-secrets.yaml
-....├── postgres-pvc.yaml
-....└── postgres-service.yaml
-....├── pgadmin-service.yaml
-....├── grafana-service.yaml
-....├── postgres-deployment.yaml
-....├── pgadmin-deployment.yaml
-....├── grafana-deployment.yaml
-....└── ingress.yaml
+![alt text](tree.png "Title")
 
 ---
 
