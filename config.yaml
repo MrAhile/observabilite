@@ -1,0 +1,17 @@
+# config.yaml
+namespace: observabilite
+resource_directory: ./manifests # Remplacez par le chemin réel de votre dossier de manifestes
+resources:
+  - namespace.yaml
+  - grafana-secrets.yaml
+  - pgadmin-secrets.yaml
+  - postgres-secrets.yaml
+  - grafana-pvc.yaml
+  - postgres-pvc.yaml
+  - postgres-service.yaml
+  - pgadmin-service.yaml
+  - grafana-service.yaml
+  - postgres-deployment.yaml
+  - pgadmin-deployment.yaml
+  - grafana-deployment.yaml
+  - ingress.yaml

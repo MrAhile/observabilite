@@ -1,0 +1,31 @@
+# ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: observabilite-ingress
+  namespace: observabilite
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx # Doit correspondre à votre contrôleur Ingress
+  rules:
+    - host: pgadmin.observabilite.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: pgadmin-service
+                port:
+                  number: 5050 # Port du service pgAdmin
+    - host: grafana.observabilite.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: grafana-service
+                port:
+                  number: 3000 # Port du service Grafana
